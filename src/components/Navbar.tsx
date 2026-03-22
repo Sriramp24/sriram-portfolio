@@ -51,7 +51,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="https://drive.google.com/file/d/19e1inDlTdwX8hRI3ZMKsWAXjh7zBxtgB/view?usp=drivesdk"
+            href="https://drive.google.com/file/d/1OhXI0jfxWbmGgy2bHeKJgjMn9wHUfp4_/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2 rounded-full font-medium text-sm text-white bg-white/5 border border-white/10 hover:bg-white/10 transition-colors backdrop-blur-sm"
@@ -89,7 +89,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="https://drive.google.com/file/d/19e1inDlTdwX8hRI3ZMKsWAXjh7zBxtgB/view?usp=drivesdk"
+              href="https://drive.google.com/file/d/1OhXI0jfxWbmGgy2bHeKJgjMn9wHUfp4_/view?usp=sharing"
               target="_blank"
               onClick={() => setIsOpen(false)}
               className="text-center px-6 py-3 rounded-xl font-medium text-white bg-gradient-to-r from-primary to-secondary"

@@ -55,7 +55,7 @@ export default function Hero() {
             <a href="#projects" className="px-8 py-3 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-medium hover:scale-105 transition-transform shadow-[0_0_20px_rgba(79,70,229,0.4)]">
               View Projects
             </a>
-            <a href="https://drive.google.com/file/d/19e1inDlTdwX8hRI3ZMKsWAXjh7zBxtgB/view?usp=drivesdk" target="_blank" className="px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10 transition-colors backdrop-blur-sm">
+            <a href="https://drive.google.com/file/d/1OhXI0jfxWbmGgy2bHeKJgjMn9wHUfp4_/view?usp=sharing" target="_blank" className="px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10 transition-colors backdrop-blur-sm">
               Download Resume
             </a>
             <a href="#contact" className="px-8 py-3 rounded-full text-gray-300 hover:text-white border border-transparent font-medium hover:border-white/10 transition-colors">
