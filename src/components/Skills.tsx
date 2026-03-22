@@ -79,22 +79,20 @@ export default function Skills() {
                 {skillGroup.category}
               </h3>
 
-              <div className="space-y-5">
+              <div className="flex flex-wrap gap-3">
                 {skillGroup.items.map((skill, index) => (
-                  <div key={index} className="space-y-2">
-                    <div className="flex justify-between text-sm font-medium">
-                      <span className="text-gray-300">{skill.name}</span>
-                    </div>
-                    <div className="h-2 w-full bg-background rounded-full overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.percent}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, delay: 0.2 + (index * 0.1) }}
-                        className="h-full bg-gradient-to-r from-primary to-secondary rounded-full"
-                      />
-                    </div>
-                  </div>
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: groupIndex * 0.1 + index * 0.05 }}
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 hover:border-white/20 hover:shadow-[0_0_15px_rgba(79,70,229,0.3)] transition-all cursor-default"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-primary to-secondary" />
+                    <span className="text-sm font-medium">{skill.name}</span>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
