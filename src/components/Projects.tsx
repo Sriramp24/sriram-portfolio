@@ -91,15 +91,6 @@ export default function Projects() {
                   >
                     <FaGithub size={20} />
                   </a>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-12 h-12 rounded-full bg-white/5 border border-white/10 text-white hover:bg-secondary hover:border-secondary hover:scale-110 transition-all duration-300"
-                    title="Live Preview"
-                  >
-                    <FaExternalLinkAlt size={16} />
-                  </a>
                 </div>
               </div>
             </motion.div>

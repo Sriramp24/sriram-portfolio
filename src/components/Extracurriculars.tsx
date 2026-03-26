@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaLeaf, FaHandsHelping } from "react-icons/fa";
+import { FaLeaf, FaHandsHelping, FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Extracurriculars() {
   return (
@@ -38,9 +38,12 @@ export default function Extracurriculars() {
             </div>
             
             <div className="text-center md:text-left">
-              <h3 className="text-2xl font-bold text-white font-outfit mb-2">
-                Dhruvansh NGO Volunteer
-              </h3>
+              <a href="https://drive.google.com/file/d/1pR9hENrNCXw2R0V5mJoEQMhcnSQ8echA/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="group/link flex items-center gap-2 justify-center md:justify-start cursor-pointer w-fit mx-auto md:mx-0">
+                <h3 className="text-2xl font-bold text-white font-outfit mb-2 group-hover/link:text-green-400 transition-colors">
+                  Dhruvansh NGO Volunteer
+                </h3>
+                <FaExternalLinkAlt size={16} className="text-green-400 opacity-0 group-hover/link:opacity-100 transition-opacity mb-2" />
+              </a>
               <p className="text-green-400 font-medium mb-4 flex items-center gap-2 justify-center md:justify-start">
                 <FaLeaf className="text-sm" /> Community Greening Initiative
               </p>

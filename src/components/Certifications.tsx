@@ -1,20 +1,30 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaCertificate, FaDesktop } from "react-icons/fa";
+import { FaCertificate, FaDesktop, FaExternalLinkAlt } from "react-icons/fa";
 
 const trainings = [
   {
     title: "Foundations and Data Structures in C, C++ and Java",
     duration: "Jun 2025 – Jul 2025",
     learnings: ["Programming fundamentals", "Core data structures", "Algorithm implementation"],
+    link: "https://drive.google.com/file/d/1rcEMoTJyMCIp-kbAM5CU6tWgHCs87UiA/view?usp=drive_link"
   }
 ];
 
 const certifications = [
-  "ChatGPT, Gen AI & LLM – Infosys",
-  "Build Generative AI Apps and Solutions with No-Code Tools – Infosys",
-  "Fundamentals of Data Structures using C++ – Centre for Professional Enhancement"
+  {
+    title: "ChatGPT, Gen AI & LLM – Infosys",
+    link: "https://drive.google.com/file/d/1C0Pf-_gK36mmQJrMvCH2oqCnTt5QKFji/view?usp=sharing"
+  },
+  {
+    title: "Build Generative AI Apps and Solutions with No-Code Tools – Infosys",
+    link: "https://drive.google.com/file/d/1mfQe76VQet-PxdF02AI3M95j_3P21AJp/view?usp=sharing"
+  },
+  {
+    title: "Fundamentals of Data Structures using C++ – Centre for Professional Enhancement",
+    link: "https://drive.google.com/file/d/1rcEMoTJyMCIp-kbAM5CU6tWgHCs87UiA/view?usp=drive_link"
+  }
 ];
 
 export default function Certifications() {
@@ -48,7 +58,10 @@ export default function Certifications() {
             <div className="space-y-6">
               {trainings.map((training, index) => (
                 <div key={index} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/50 transition-colors">
-                  <h4 className="text-xl font-bold text-white mb-2">{training.title}</h4>
+                  <a href={training.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 group/link w-fit inline-flex">
+                    <h4 className="text-xl font-bold text-white group-hover/link:text-primary transition-colors mb-2">{training.title}</h4>
+                    <FaExternalLinkAlt size={14} className="mb-2 text-primary opacity-0 group-hover/link:opacity-100 transition-opacity" />
+                  </a>
                   <p className="text-primary text-sm font-mono mb-4 bg-primary/10 inline-block px-3 py-1 rounded">
                     {training.duration}
                   </p>
@@ -77,14 +90,17 @@ export default function Certifications() {
             </h3>
             <div className="space-y-4">
               {certifications.map((cert, index) => (
-                <div key={index} className="group flex items-start gap-4 bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 hover:border-secondary/50 transition-all duration-300 cursor-default">
+                <a key={index} href={cert.link} target="_blank" rel="noopener noreferrer" className="group flex items-start gap-4 bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 hover:border-secondary/50 transition-all duration-300 cursor-pointer">
                   <div className="mt-1 p-2 rounded-lg bg-secondary/20 text-secondary group-hover:scale-110 transition-transform">
                     <FaCertificate size={16} />
                   </div>
-                  <p className="text-gray-300 font-medium leading-relaxed group-hover:text-white transition-colors">
-                    {cert}
-                  </p>
-                </div>
+                  <div className="flex items-center gap-2">
+                    <p className="text-gray-300 font-medium leading-relaxed group-hover:text-white transition-colors">
+                      {cert.title}
+                    </p>
+                    <FaExternalLinkAlt size={12} className="text-secondary opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
+                  </div>
+                </a>
               ))}
             </div>
           </motion.div>
